@@ -1,0 +1,26 @@
+{
+  "name": "goal-tracker",
+  "version": "1.0.0",
+  "description": "Трекер целей с прогресс-баром и статистикой",
+  "main": "index.html",
+  "scripts": {
+    "start": "python -m http.server 8000",
+    "dev": "python -m http.server 8000"
+  },
+  "keywords": [
+    "goal-tracker",
+    "progress",
+    "statistics",
+    "web-app",
+    "html",
+    "css",
+    "javascript"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/YOUR_USERNAME/goal-tracker.git"
+  },
+  "homepage": "https://YOUR_USERNAME.github.io/goal-tracker/"
+} 

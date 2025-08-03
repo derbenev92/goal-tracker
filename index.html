@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Трекер Целей</title>
+    <meta name="description" content="Отслеживайте свой прогресс к целям с красивой диаграммой и историей результатов">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎯</text></svg>">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>🎯 Трекер Целей</h1>
+            <p>Отслеживайте свой прогресс к цели</p>
+        </header>
+
+        <main class="main-content">
+            <!-- Секция установки цели -->
+            <section class="goal-section">
+                <h2>Установить цель</h2>
+                <div class="goal-input">
+                    <input type="number" id="goalInput" placeholder="Введите цель (по умолчанию 100)" value="100">
+                    <button id="setGoalBtn" class="btn btn-primary">Установить цель</button>
+                </div>
+            </section>
+
+            <!-- Диаграмма прогресса -->
+            <section class="progress-section">
+                <h2>Прогресс</h2>
+                <div class="progress-container">
+                    <div class="progress-bar-container">
+                        <div class="progress-bar">
+                            <div class="progress-bar-fill" id="progressBarFill"></div>
+                            <div class="progress-percentage" id="progressPercentage">0%</div>
+                        </div>
+                        <div class="progress-text">
+                            <span id="currentScore">0</span>
+                            <span class="progress-label">из <span id="goalScore">100</span></span>
+                        </div>
+                    </div>
+                    <div class="progress-stats">
+                        <div class="stat">
+                            <span class="stat-label">Цель:</span>
+                            <span id="goalDisplay">100 pts</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-label">Текущий результат:</span>
+                            <span id="currentDisplay">0 pts</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-label">Осталось:</span>
+                            <span id="remainingDisplay">100 pts</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-label">Победы:</span>
+                            <span id="winsDisplay" class="wins-counter">0</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-label">Поражения:</span>
+                            <span id="lossesDisplay" class="losses-counter">0</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Кнопки добавления результатов -->
+            <section class="actions-section">
+                <h2>Добавить результат</h2>
+                <div class="action-buttons">
+                    <button id="addPositiveBtn" class="btn btn-success">
+                        <span class="btn-icon">+</span>
+                        <span class="btn-text">+25 pts</span>
+                    </button>
+                    <button id="addNegativeBtn" class="btn btn-danger">
+                        <span class="btn-icon">-</span>
+                        <span class="btn-text">-25 pts</span>
+                    </button>
+                </div>
+            </section>
+
+            <!-- История результатов -->
+            <section class="history-section">
+                <h2>История результатов</h2>
+                <div id="historyList" class="history-list">
+                    <div class="history-empty">Нет записей. Добавьте первый результат!</div>
+                </div>
+                <button id="clearHistoryBtn" class="btn btn-secondary">Очистить всё</button>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
